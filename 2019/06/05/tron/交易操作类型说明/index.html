@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>交易操作类型说明 | 波场TRX币</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="交易的合约类型合约支持多种类型，是TRON网络中的基本单位。下面详细介绍每种合约及参数。\1.创建账户 AccountCreateContract \2.转账 TransferContract\3.转账发布的Token TransferAssetContract\4.投票超级节点  VoteWitnessContract\5.创建超级节点候选人 WitnessCreateContract\6.发布">
+<meta name="keywords" content="波场协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交易操作类型说明">
+<meta property="og:url" content="http://www.trxbi.com/2019/06/05/tron/交易操作类型说明/index.html">
+<meta property="og:site_name" content="波场TRX币">
+<meta property="og:description" content="交易的合约类型合约支持多种类型，是TRON网络中的基本单位。下面详细介绍每种合约及参数。\1.创建账户 AccountCreateContract \2.转账 TransferContract\3.转账发布的Token TransferAssetContract\4.投票超级节点  VoteWitnessContract\5.创建超级节点候选人 WitnessCreateContract\6.发布">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T06:40:03.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交易操作类型说明">
+<meta name="twitter:description" content="交易的合约类型合约支持多种类型，是TRON网络中的基本单位。下面详细介绍每种合约及参数。\1.创建账户 AccountCreateContract \2.转账 TransferContract\3.转账发布的Token TransferAssetContract\4.投票超级节点  VoteWitnessContract\5.创建超级节点候选人 WitnessCreateContract\6.发布">
+<meta name="twitter:creator" content="@coolwuxing">
+  
+    <link rel="alternative" href="/atom.xml" title="波场TRX币" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43935113-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cb925fa900fb107efad8d43d1e78d73e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">波场TRX币
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3">买币</a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.trxbi.com"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="main-wrap" class="outer">
+        <section id="main"><article id="post-tron/交易操作类型说明" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/05/tron/交易操作类型说明/" class="article-date">
+  <time datetime="2019-06-05T10:38:57.000Z" itemprop="datePublished">2019-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      交易操作类型说明
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="交易的合约类型"><a href="#交易的合约类型" class="headerlink" title="交易的合约类型"></a>交易的合约类型</h2><p>合约支持多种类型，是TRON网络中的基本单位。下面详细介绍每种合约及参数。\<br><a href="#1">1.创建账户 AccountCreateContract</a> \<br><a href="#2">2.转账 TransferContract</a>\<br><a href="#3">3.转账发布的Token TransferAssetContract</a>\<br><a href="#4">4.投票超级节点  VoteWitnessContract</a>\<br><a href="#5">5.创建超级节点候选人 WitnessCreateContract</a>\<br><a href="#6">6.发布Token AssetIssueContract</a>\<br><a href="#7">7.更新超级节点候选人URL WitnessUpdateContract</a>\<br><a href="#8">8.购买发行的Token ParticipateAssetIssueContract</a>\<br><a href="#9">9.更新账户 AccountUpdateContract</a>\<br><a href="#10">10.冻结资产 FreezeBalanceContract</a>\<br><a href="#11">11.解冻资产 UnfreezeBalanceContract</a>\<br><a href="#12">12.提取奖励 WithdrawBalanceContract</a>\<br><a href="#13">13.解冻发布的Token UnfreezeAssetContract</a>\<br><a href="#14">14.更新通证参数 UpdateAssetContract</a>\<br><a href="#15">15.创建提议  ProposalCreateContract</a>\<br><a href="#16">16.赞成提议 ProposalApproveContract</a>\<br><a href="#17">17.删除提议 ProposalDeleteContract</a>\<br><a href="#18">18.设置账户ID SetAccountIdContract</a>\<br><a href="#19">19.创建智能合约 CreateSmartContract</a>\<br><a href="#20">20.触发智能合约 TriggerSmartContract</a>\<br><a href="#21">21.更新合约 UpdateSettingContract</a>\<br><a href="#22">22.创建交易所 ExchangeCreateContract</a>\<br><a href="#23">23.给交易所注资 ExchangeInjectContract</a>\<br><a href="#24">24.从交易所撤资 ExchangeWithdrawContract</a>\<br><a href="#25">25.在交易所交易 ExchangeTransactionContract</a>\</p>
+<h2 id="1-创建账户-AccountCreateContract"><a href="#1-创建账户-AccountCreateContract" class="headerlink" title="1.创建账户 AccountCreateContract"></a><h2 id="1">1.创建账户 AccountCreateContract</h2></h2><p>   <code>AccountCreatContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>account_address</code>： 将要创建的账户地址。<br>   <code>type</code>：账户类型——比如：_0_ 代表的账户类型是<code>Normal</code>。</p>
+<pre><code>message AccountCreateContract {
+  bytes owner_address = 1;
+  bytes account_address = 2;
+  AccountType type = 3;
+}
+</code></pre><h2 id="2-转账-TransferContract"><a href="#2-转账-TransferContract" class="headerlink" title="2.转账 TransferContract"></a><h2 id="2">2.转账 TransferContract</h2></h2><p>   <code>TransferContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>to_address</code>： 目标账户地址。<br>   <code>amount</code>：转账金额，单位为 sun。</p>
+<pre><code>message TransferContract {
+  bytes owner_address = 1;
+  bytes to_address = 2;
+  int64 amount = 3;
+}
+</code></pre><h2 id="3-转账发布的Token-TransferAssetContract"><a href="#3-转账发布的Token-TransferAssetContract" class="headerlink" title="3.转账发布的Token TransferAssetContract"></a><h2 id="3">3.转账发布的Token TransferAssetContract</h2></h2><p>   <code>TransferAssetContract</code>包含4种参数：<br>   <code>asset_name</code>：发布Token的名称。<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>to_address</code>： 目标账户地址。<br>   <code>amount</code>：转账Token的数量。</p>
+<pre><code>message TransferAssetContract {
+  bytes asset_name = 1;
+  bytes owner_address = 2;
+  bytes to_address = 3;
+  int64 amount = 4;
+}
+</code></pre><h2 id="4-投票超级节点-VoteWitnessContract"><a href="#4-投票超级节点-VoteWitnessContract" class="headerlink" title="4.投票超级节点  VoteWitnessContract"></a><h2 id="4">4.投票超级节点  VoteWitnessContract</h2></h2><p>   <code>VoteWitnessContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>vote_address</code>： 超级节点候选人的地址。<br>   <code>vote_count</code>：投给超级节点候选人的票数。<br>   <code>votes</code>：超级节点候选人列表。<br>   <code>support</code>：是否支持，这里应该是恒为true,暂未使用该参数。  </p>
+<pre><code>message VoteWitnessContract {
+  message Vote {
+    bytes vote_address = 1;
+    int64 vote_count = 2;
+  }
+  bytes owner_address = 1;
+  repeated Vote votes = 2;
+  bool support = 3;
+}
+</code></pre><h2 id="5-创建超级节点候选人-WitnessCreateContract"><a href="#5-创建超级节点候选人-WitnessCreateContract" class="headerlink" title="5.创建超级节点候选人 WitnessCreateContract"></a><h2 id="5">5.创建超级节点候选人 WitnessCreateContract</h2></h2><p>   <code>WitnessCreateContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>url</code>： 超级节点后续人网址。    </p>
+<pre><code>message WitnessCreateContract {
+  bytes owner_address = 1;
+  bytes url = 2;
+}
+</code></pre><h2 id="6-发布Token-AssetIssueContract"><a href="#6-发布Token-AssetIssueContract" class="headerlink" title="6.发布Token AssetIssueContract"></a><h2 id="6">6.发布Token AssetIssueContract</h2></h2><p>   <code>AssetIssueContract</code>包含17种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>name</code>：发布Token的名称——比如：<em>“SiCongcontract”</em>。<br>   <code>abbr</code>： 。<br>   <code>total_supply</code>：发行总的token数量——比如：<em>100000000</em>。<br>   <code>frozen_supply</code>：冻结Token的数量和冻结时间列表。<br>   <code>trx_num</code>：对应TRX数量——比如：<em>232241</em>。<br>   <code>num</code>： 对应的自定义资产数目。<br>   <code>start_time</code>：开始时间——比如：<em>20170312</em>。<br>   <code>end_time</code>：结束时间——比如：<em>20170512</em>。<br>   <code>order</code>：相同asset_name时，order递增，默认初始值为0。<br>   <code>vote_score</code>：合约的评分——比如：<em>12343</em>。<br>   <code>description</code>：Token的描述——比如：<em>”trondada”</em>。<br>   <code>url</code>：Token的url地址链接。<br>   <code>free_asset_net_limit</code>：每个账户可以使用的免费带宽（转移该资产时使用）。<br>   <code>public_free_asset_net_limit</code>：所有账户可以使用的免费带宽（转移该资产时使用）。<br>   <code>public_free_asset_net_usage</code>：所有账户使用免费带宽（转移该资产时使用）。<br>   <code>public_latest_free_net_time</code>：最近一次转移该Token使用免费带宽的时间。  </p>
+<pre><code>message AssetIssueContract {
+  message FrozenSupply {
+    int64 frozen_amount = 1;
+    int64 frozen_days = 2;
+  }
+  bytes owner_address = 1;
+  bytes name = 2;
+  bytes abbr = 3;
+  int64 total_supply = 4;
+  repeated FrozenSupply frozen_supply = 5;
+  int32 trx_num = 6;
+  int32 num = 8;
+  int64 start_time = 9;
+  int64 end_time = 10;
+  int64 order = 11; // the order of tokens of the same name
+  int32 vote_score = 16;
+  bytes description = 20;
+  bytes url = 21;
+  int64 free_asset_net_limit = 22;
+  int64 public_free_asset_net_limit = 23;
+  int64 public_free_asset_net_usage = 24;
+  int64 public_latest_free_net_time = 25;
+}
+</code></pre><h2 id="7-更新超级节点候选人URL-WitnessUpdateContract"><a href="#7-更新超级节点候选人URL-WitnessUpdateContract" class="headerlink" title="7.更新超级节点候选人URL WitnessUpdateContract"></a><h2 id="7">7.更新超级节点候选人URL WitnessUpdateContract</h2></h2><p>   <code>WitnessUpdateContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>update_url</code>： 超级节点更新后的url。  </p>
+<pre><code>message WitnessUpdateContract {
+  bytes owner_address = 1;
+  bytes update_url = 12;
+}
+</code></pre><h2 id="8-购买发行的Token-ParticipateAssetIssueContract"><a href="#8-购买发行的Token-ParticipateAssetIssueContract" class="headerlink" title="8.购买发行的Token ParticipateAssetIssueContract"></a><h2 id="8">8.购买发行的Token ParticipateAssetIssueContract</h2></h2><p>   <code>ParticipateAssetIssueContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>to_address</code>：发行Token所有者地址。<br>   <code>account_name</code>： 发行Token的名称，包括Token名称和order<br>   <code>amount</code>：购买发行Token使用TRX的数量，单位是 sun。  </p>
+<pre><code>message ParticipateAssetIssueContract {
+  bytes owner_address = 1;
+  bytes to_address = 2;
+  bytes asset_name = 3;
+  int64 amount = 4;
+}
+</code></pre><h2 id="9-更新账户-AccountUpdateContract"><a href="#9-更新账户-AccountUpdateContract" class="headerlink" title="9.更新账户 AccountUpdateContract"></a><h2 id="9">9.更新账户 AccountUpdateContract</h2></h2><p>   <code>AccountUpdateContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>account_name</code>： 账户名称——比如： <em>“SiCongsaccount”</em>。   </p>
+<pre><code>// Update account name. Account name is not unique now.
+message AccountUpdateContract {
+  bytes account_name = 1;
+  bytes owner_address = 2;
+}
+</code></pre><h2 id="10-冻结资产-FreezeBalanceContract"><a href="#10-冻结资产-FreezeBalanceContract" class="headerlink" title="10.冻结资产 FreezeBalanceContract"></a><h2 id="10">10.冻结资产 FreezeBalanceContract</h2></h2><p>   <code>FreezeBalanceContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>frozen_balance</code>：冻结资产的数量。<br>   <code>frozen_duration</code>：冻结资产的时间段。<br>   <code>resource</code>： 冻结TRX获取资源的类型。<br>   <code>receiver_address</code> ：接收资源的账户。    </p>
+<pre><code>message FreezeBalanceContract {
+  bytes owner_address = 1;
+  int64 frozen_balance = 2;
+  int64 frozen_duration = 3;
+  ResourceCode resource = 10;
+  bytes receiver_address = 15;
+}
+</code></pre><h2 id="11-解冻资产-UnfreezeBalanceContract"><a href="#11-解冻资产-UnfreezeBalanceContract" class="headerlink" title="11.解冻资产 UnfreezeBalanceContract"></a><h2 id="11">11.解冻资产 UnfreezeBalanceContract</h2></h2><p>   <code>UnfreezeBalanceContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>resource</code>： 解冻资源的类型。<br>   <code>receiver_address</code> ：接收资源的账户。</p>
+<pre><code>message UnfreezeBalanceContract {
+  bytes owner_address = 1;
+  ResourceCode resource = 10;
+  bytes receiver_address = 13;
+}
+</code></pre><h2 id="12-提取奖励-WithdrawBalanceContract"><a href="#12-提取奖励-WithdrawBalanceContract" class="headerlink" title="12.提取奖励 WithdrawBalanceContract"></a><h2 id="12">12.提取奖励 WithdrawBalanceContract</h2></h2><p>   <code>WithdrawBalanceContract</code>包含1种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。  </p>
+<pre><code>message WithdrawBalanceContract {
+  bytes owner_address = 1;
+}
+</code></pre><h2 id="13-解冻发布的Token-UnfreezeAssetContract"><a href="#13-解冻发布的Token-UnfreezeAssetContract" class="headerlink" title="13.解冻发布的Token UnfreezeAssetContract"></a><h2 id="13">13.解冻发布的Token UnfreezeAssetContract</h2></h2><p>   <code>UnfreezeAssetContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。  </p>
+<pre><code>message UnfreezeAssetContract {
+  bytes owner_address = 1;
+}
+</code></pre><h2 id="14-更新通证参数-UpdateAssetContract"><a href="#14-更新通证参数-UpdateAssetContract" class="headerlink" title="14.更新通证参数 UpdateAssetContract"></a><h2 id="14">14.更新通证参数 UpdateAssetContract</h2></h2><p>   <code>UpdateAssetContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>description</code>： 通证的描述。<br>   <code>url</code>：通证的Url。<br>   <code>new_limit</code>：每个调用者可以消耗Bandwidth point的限制。<br>   <code>new_public_limit</code>： 所有调用者可以消耗Bandwidth points的限制。  </p>
+<pre><code>message UpdateAssetContract {
+  bytes owner_address = 1;
+  bytes description = 2;
+  bytes url = 3;
+  int64 new_limit = 4;
+  int64 new_public_limit = 5;
+}
+</code></pre><h2 id="15-创建提议-ProposalCreateContract"><a href="#15-创建提议-ProposalCreateContract" class="headerlink" title="15.创建提议  ProposalCreateContract"></a><h2 id="15">15.创建提议  ProposalCreateContract</h2></h2><p>   <code>ProposalCreateContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>parameters</code>： 提议。  </p>
+<pre><code>message ProposalCreateContract {
+  bytes owner_address = 1;
+  map&lt;int64, int64&gt; parameters = 2;
+}
+</code></pre><h2 id="16-赞成提议-ProposalApproveContract"><a href="#16-赞成提议-ProposalApproveContract" class="headerlink" title="16.赞成提议 ProposalApproveContract"></a><h2 id="16">16.赞成提议 ProposalApproveContract</h2></h2><p>   <code>ProposalApproveContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>proposal_id</code>： 提议的Id。<br>   <code>is_add_approval</code>：是否赞成提议。  </p>
+<pre><code>message ProposalApproveContract {
+  bytes owner_address = 1;
+  int64 proposal_id = 2;
+  bool is_add_approval = 3; // add or remove approval
+}
+</code></pre><h2 id="17-删除提议-ProposalDeleteContract"><a href="#17-删除提议-ProposalDeleteContract" class="headerlink" title="17.删除提议 ProposalDeleteContract"></a><h2 id="17">17.删除提议 ProposalDeleteContract</h2></h2><p>   <code>ProposalDeleteContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>proposal_id</code>： 提议ID。  </p>
+<pre><code>message ProposalDeleteContract {
+  bytes owner_address = 1;
+  int64 proposal_id = 2;
+}
+</code></pre><h2 id="18-设置账户ID-SetAccountIdContract"><a href="#18-设置账户ID-SetAccountIdContract" class="headerlink" title="18.设置账户ID SetAccountIdContract"></a><h2 id="18">18.设置账户ID SetAccountIdContract</h2></h2><p>   <code>SetAccountIdContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>account_id</code>： 账户Id。  </p>
+<pre><code>// Set account id if the account has no id. Account id is unique and case insensitive.
+message SetAccountIdContract {
+  bytes account_id = 1;
+  bytes owner_address = 2;
+}
+</code></pre><h2 id="19-创建智能合约-CreateSmartContract"><a href="#19-创建智能合约-CreateSmartContract" class="headerlink" title="19.创建智能合约 CreateSmartContract"></a><h2 id="19">19.创建智能合约 CreateSmartContract</h2></h2><p>   <code>CreateSmartContract</code>包含2种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>new_contract</code>： 智能合约。  </p>
+<pre><code>message CreateSmartContract {
+  bytes owner_address = 1;
+  SmartContract new_contract = 2;
+}
+</code></pre><h2 id="20-触发智能合约-TriggerSmartContract"><a href="#20-触发智能合约-TriggerSmartContract" class="headerlink" title="20.触发智能合约 TriggerSmartContract"></a><h2 id="20">20.触发智能合约 TriggerSmartContract</h2></h2><p>   <code>TriggerSmartContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>contract_address</code>： 合约地址。<br>   <code>call_value</code>：TRX的值。<br>   <code>data</code>：操作参数。   </p>
+<pre><code>message TriggerSmartContract {
+  bytes owner_address = 1;
+  bytes contract_address = 2;
+  int64 call_value = 3;
+  bytes data = 4;
+}
+</code></pre><h2 id="21-更新合约-UpdateSettingContract"><a href="#21-更新合约-UpdateSettingContract" class="headerlink" title="21.更新合约 UpdateSettingContract"></a><h2 id="21">21.更新合约 UpdateSettingContract</h2></h2><p>   <code>UpdateSettingContract</code>包含3种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>contract_address</code>： 合约地址。<br>   <code>consume_user_resource_percent</code>：将要更新的账户消耗资源的百分比。  </p>
+<pre><code>message UpdateSettingContract {
+  bytes owner_address = 1;
+  bytes contract_address = 2;
+  int64 consume_user_resource_percent = 3;
+}
+</code></pre><h2 id="22-创建交易所-ExchangeCreateContract"><a href="#22-创建交易所-ExchangeCreateContract" class="headerlink" title="22.创建交易所 ExchangeCreateContract"></a><h2 id="22">22.创建交易所 ExchangeCreateContract</h2></h2><p>   <code>ExchangeCreateContract</code>包含5种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>first_token_id</code>： 第1种token的id 。<br>   <code>first_token_balance</code>：第1种token的balance。<br>   <code>second_token_id</code>：第2种token的id。<br>   <code>second_token_balance</code>：第2种token的balance。  </p>
+<pre><code>message ExchangeCreateContract {
+  bytes owner_address = 1;
+  bytes first_token_id = 2;
+  int64 first_token_balance = 3;
+  bytes second_token_id = 4;
+  int64 second_token_balance = 5;
+}
+</code></pre><h2 id="23-给交易所注资-ExchangeInjectContract"><a href="#23-给交易所注资-ExchangeInjectContract" class="headerlink" title="23.给交易所注资 ExchangeInjectContract"></a><h2 id="23">23.给交易所注资 ExchangeInjectContract</h2></h2><p>   <code>ExchangeInjectContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>exchange_id</code>： 交易对的id。<br>   <code>token_id</code>：要注资的token的id。<br>   <code>quant</code>：要注资的token的金额。   </p>
+<pre><code>message ExchangeInjectContract {
+  bytes owner_address = 1;
+  int64 exchange_id = 2;
+  bytes token_id = 3;
+  int64 quant = 4;
+}
+</code></pre><h2 id="24-从交易所撤资-ExchangeWithdrawContract"><a href="#24-从交易所撤资-ExchangeWithdrawContract" class="headerlink" title="24.从交易所撤资 ExchangeWithdrawContract"></a><h2 id="24">24.从交易所撤资 ExchangeWithdrawContract</h2></h2><p>   <code>ExchangeWithdrawContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>exchange_id</code>： 交易对的id。<br>   <code>token_id</code>：要撤资的token的id。<br>   <code>quant</code>：要撤资的token的金额。   </p>
+<pre><code>message ExchangeWithdrawContract {
+  bytes owner_address = 1;
+  int64 exchange_id = 2;
+  bytes token_id = 3;
+  int64 quant = 4;
+}
+</code></pre><h2 id="25-在交易所交易-ExchangeTransactionContract"><a href="#25-在交易所交易-ExchangeTransactionContract" class="headerlink" title="25.在交易所交易 ExchangeTransactionContract"></a><h2 id="25">25.在交易所交易 ExchangeTransactionContract</h2></h2><p>   <code>ExchangeTransactionContract</code>包含4种参数：<br>   <code>owner_address</code>：合约持有人地址——比如： <em>“0xu82h…7237”</em>。<br>   <code>exchange_id</code>： 交易对的id。<br>   <code>token_id</code>：要卖出的token的id。<br>   <code>quant</code>：要卖出的token的金额。   </p>
+<pre><code>message ExchangeTransactionContract {
+  bytes owner_address = 1;
+  int64 exchange_id = 2;
+  bytes token_id = 3;
+  int64 quant = 4;
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.trxbi.com/2019/06/05/tron/交易操作类型说明/" data-id="cjxcwb0ts0004sffmtm3l5fnh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/波场协议/">波场协议</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/05/tron/One_Page/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          波场介绍
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/05/tron/创建账户/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">创建账户</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          
+            <aside id="sidebar">
+  
+    
+  
+    
+    <div class="widget-wrap">
+      <h3 class="widget-title">Related</h3>
+      <div class="widget recents">
+        <ul>
+  
+    <li>
+      <a href="/2019/06/05/tron/创建账户/">创建账户</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/冻结与投票/">冻结与投票</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/多重签名/">多重签名</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/交易简介/">交易简介</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/波场去中心化交易所/">波场去中心化交易所</a>
+    </li>
+  
+        </ul>
+      </div>
+    </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/05/tron/波场去中心化交易所/">波场去中心化交易所</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/buffett/">致社区的一封公开信：沃伦 · 巴菲特慈善午宴</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/One_Page/">波场介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/交易操作类型说明/">交易操作类型说明</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/创建账户/">创建账户</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/波场介绍/" style="font-size: 10px;">波场介绍</a> <a href="/tags/波场协议/" style="font-size: 20px;">波场协议</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>
+      &copy; 2019 TRX币<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3" class="mobile-nav-link">买币</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    <a href='#logo' id='btn-btt'>^</a>
+  </div>
+</body>
+</html>

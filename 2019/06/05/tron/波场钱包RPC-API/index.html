@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>波场钱包RPC-API | 波场TRX币</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="波场钱包RPC-APIAPI的具体定义请参考\你可能需要经常用到的如下几个API\ 1. 获取账户信息\2. 转让波场币\3. 广播交易\4. 创建账户\5. 更新账户\6. 投票\7. 通证发行\8. 查询超级代表候选人列表\9. 申请成为超级代表候选人\10. 更新超级代表候选人信息\11. 转让通证\12. 参与通证发行\14. 查询所有通证列表\13. 查询所有节点\15. 查询某个账户发">
+<meta name="keywords" content="波场协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="波场钱包RPC-API">
+<meta property="og:url" content="http://www.trxbi.com/2019/06/05/tron/波场钱包RPC-API/index.html">
+<meta property="og:site_name" content="波场TRX币">
+<meta property="og:description" content="波场钱包RPC-APIAPI的具体定义请参考\你可能需要经常用到的如下几个API\ 1. 获取账户信息\2. 转让波场币\3. 广播交易\4. 创建账户\5. 更新账户\6. 投票\7. 通证发行\8. 查询超级代表候选人列表\9. 申请成为超级代表候选人\10. 更新超级代表候选人信息\11. 转让通证\12. 参与通证发行\14. 查询所有通证列表\13. 查询所有节点\15. 查询某个账户发">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T06:43:54.155Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="波场钱包RPC-API">
+<meta name="twitter:description" content="波场钱包RPC-APIAPI的具体定义请参考\你可能需要经常用到的如下几个API\ 1. 获取账户信息\2. 转让波场币\3. 广播交易\4. 创建账户\5. 更新账户\6. 投票\7. 通证发行\8. 查询超级代表候选人列表\9. 申请成为超级代表候选人\10. 更新超级代表候选人信息\11. 转让通证\12. 参与通证发行\14. 查询所有通证列表\13. 查询所有节点\15. 查询某个账户发">
+<meta name="twitter:creator" content="@coolwuxing">
+  
+    <link rel="alternative" href="/atom.xml" title="波场TRX币" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43935113-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cb925fa900fb107efad8d43d1e78d73e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">波场TRX币
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3">买币</a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.trxbi.com"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="main-wrap" class="outer">
+        <section id="main"><article id="post-tron/波场钱包RPC-API" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/05/tron/波场钱包RPC-API/" class="article-date">
+  <time datetime="2019-06-05T10:38:57.000Z" itemprop="datePublished">2019-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      波场钱包RPC-API
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="波场钱包RPC-API"><a href="#波场钱包RPC-API" class="headerlink" title="波场钱包RPC-API"></a>波场钱包RPC-API</h1><p><a href="#API的具体定义请参考">API的具体定义请参考</a>\<br><a href="#你可能需要经常用到的如下几个API">你可能需要经常用到的如下几个API</a>\</p>
+<p><a href="#1">1. 获取账户信息</a>\<br><a href="#2">2. 转让波场币</a>\<br><a href="#3">3. 广播交易</a>\<br><a href="#4">4. 创建账户</a>\<br><a href="#5">5. 更新账户</a>\<br><a href="#6">6. 投票</a>\<br><a href="#7">7. 通证发行</a>\<br><a href="#8">8. 查询超级代表候选人列表</a>\<br><a href="#9">9. 申请成为超级代表候选人</a>\<br><a href="#10">10. 更新超级代表候选人信息</a>\<br><a href="#11">11. 转让通证</a>\<br><a href="#12">12. 参与通证发行</a>\<br><a href="#14">14. 查询所有通证列表</a>\<br><a href="#13">13. 查询所有节点</a>\<br><a href="#15">15. 查询某个账户发行的通证列表</a>\<br><a href="#16">16. 按通证名称查询通证信息</a>\<br><a href="#17">17. 查询当前时间有效发行的通证列表</a>\<br><a href="#18">18. 获取当前区块</a>\<br><a href="#19">19. 按照高度获取区块</a>\<br><a href="#20">20. 获取交易总数</a>\<br><a href="#21">21. 通过ID查询交易</a>\<br><a href="#22">22. 通过时间查询交易（已删除）</a>\<br><a href="#23">23. 通过地址查询所有发起交易</a>\<br><a href="#24">24. 通过地址查询所有接收交易</a>\<br><a href="#25">25. 锁定资金</a>\<br><a href="#26">26. 解除资金锁定</a>\<br><a href="#27">27. 赎回出块奖励</a>\<br><a href="#28">28. 解冻通证</a>\<br><a href="#29">29. 查询下次维护时刻</a>\<br><a href="#30">30. 查询交易信息</a>\<br><a href="#31">31. 根据ID查询区块</a>\<br><a href="#32">32. 更新通证</a>\<br><a href="#33">33. 分页查询通证列表</a>\<br><a href="#34">34. 对交易进行签名</a>\<br><a href="#35">35. 创建地址和秘钥</a>\<br><a href="#36">36. TRX快捷转账</a>\<br><a href="#37">37. 生成地址和私钥</a>\<br><a href="#38">38. 转让波场币2</a>\<br><a href="#39">39. 更新账户2</a>\<br><a href="#40">40. 投票2</a>\<br><a href="#41">41. 通证发行2</a>\<br><a href="#42">42. 更新超级代表候选人信息2</a>\<br><a href="#43">43. 创建账户2</a>\<br><a href="#44">44. 申请成为超级代表候选人2</a>\<br><a href="#45">45. 转让通证2</a>\<br><a href="#46">46. 参与通证发行2</a>\<br><a href="#47">47. 锁定资金2</a>\<br><a href="#48">48. 解除资金锁定2</a>\<br><a href="#49">49. 解冻通证2</a>\<br><a href="#50">50. 赎回出块奖励2</a>\<br><a href="#51">51. 更新通证2</a>\<br><a href="#52">52. 获取当前区块2</a>\<br><a href="#53">53. 按照高度获取区块2</a>\<br><a href="#54">54. 分页获取区块2</a>\<br><a href="#55">55. 查询最后区块2</a>\<br><a href="#57">57. 通过地址查询所有发起交易2</a>\<br><a href="#58">58. 通过地址查询所有接收交易2</a>\<br><a href="#59">59. 创建交易对</a>\<br><a href="#60">60. 交易所注资</a>\<br><a href="#61">61. 交易所撤资</a>\<br><a href="#62">62. 交易所交易</a>\<br><a href="#63">63. 查询所有交易对</a>\<br><a href="#64">64. 查询指定交易对</a>\<br><a href="#65">65. 分页查询交易对</a>\<br><a href="#66">66. 创建提议</a>\<br><a href="#67">67. 赞成提议</a>\<br><a href="#68">68. 删除提议</a>\<br><a href="#69">69. 查询所有提议</a>\<br><a href="#70">70. 分页查询提议</a>\<br><a href="#71">71. 查询指定提议</a> \<br><a href="#72">72. 查询资源委派账户索引</a> \<br><a href="#73">73. 查询资源委派的详细信息</a> \<br><a href="#74">74. 通证快捷转账</a> \<br><a href="#75">75. 通证快捷转账（通过私钥）</a><br><a href="#76">76. 更新用户权限（用于多重签名）</a><br><a href="#77">77. 增加签名（用于多重签名）</a><br><a href="#78">78. 查询已签名地址（用于多重签名）</a><br><a href="#79">79. 查询交易签名权重（用于多重签名）</a> \<br><a href="#80">80. 部署智能合约 </a>\<br><a href="#81">81. 执行智能合约 </a></p>
+<h2 id="API的具体定义请参考"><a href="#API的具体定义请参考" class="headerlink" title="API的具体定义请参考"></a><h2 id="API的具体定义请参考">API的具体定义请参考</h2></h2><p><a href="https://github.com/tronprotocol/java-tron/blob/develop/src/main/protos/api/api.proto" target="_blank" rel="noopener">https://github.com/tronprotocol/java-tron/blob/develop/src/main/protos/api/api.proto</a></p>
+<h2 id="你可能需要经常用到的如下几个API"><a href="#你可能需要经常用到的如下几个API" class="headerlink" title="你可能需要经常用到的如下几个API"></a><h2 id="你可能需要经常用到的如下几个API">你可能需要经常用到的如下几个API</h2></h2><ol>
+<li>如何获取账号基本信息（类比比特币 getinfo）<br>GetAccount</li>
+<li>如何获取余额（类比比特币：getbalance）<br>GetAccount</li>
+<li>如何生成一个地址（类比比特币：getnewaddress）<br>可以在本地生成一个地址<br>可以通过一个已经存在的账号给一个新地址转账从而在区块链上生成一个新地址，通过CreateTransaction（TransferContract）完成</li>
+<li>如何获取一个地址的历史交易（类比比特币：listtransactions）<br>GetTransactionsFromThis<br>GetTransactionsToThis</li>
+<li>如何校验地址具有正确的格式  </li>
+</ol>
+<ul>
+<li>本地校验：经过decode58check后，会得到一个长度是21的byte数组，第一个字节是0x41(mainnet) 或者 0xa0(testnet).  </li>
+<li>如果想要验证一个地址是否存在于区块链上，请求API GetAccount。</li>
+</ul>
+<h2 id="1-获取账户信息"><a href="#1-获取账户信息" class="headerlink" title="1. 获取账户信息"></a><h2 id="1">1. 获取账户信息</h2></h2><p>1.1    接口声明<br>rpc GetAccount (Account) returns (Account) {};<br>1.2    提供节点<br>fullnode、soliditynode。<br>1.3    参数说明<br>Account：只需要输入address即可。<br>1.4    返回值<br>Account：返回账户所有的详细信息。<br>1.5    功能说明<br>查询余额列表。从返回的Account中可以展示所有的资产信息。</p>
+<h2 id="2-转让波场币"><a href="#2-转让波场币" class="headerlink" title="2. 转让波场币"></a><h2 id="2">2. 转让波场币</h2></h2><p>2.1    接口声明<br>rpc CreateTransaction (TransferContract) returns (Transaction)　{};<br>2.2    提供节点<br>fullnode。<br>2.3    参数说明<br>TransferContract：包含提供方地址、接收方地址、金额，其中金额的单位为sun。<br>2.4    返回值<br>Transaction：返回包含转账合约的交易，钱包签名后再请求广播交易。<br>2.5    功能说明<br>转账。创建一个转账的交易。</p>
+<h2 id="3-广播交易"><a href="#3-广播交易" class="headerlink" title="3. 广播交易"></a><h2 id="3">3. 广播交易</h2></h2><p>3.1    接口声明<br>rpc BroadcastTransaction (Transaction) returns (Return) {};<br>3.2    提供节点<br>fullnode。<br>3.3    参数说明<br>Transaction：已经由钱包签名的交易。波场中需要改变区块链状态的操作都封装在交易中。<br>3.4    返回值<br>Return：成功或失败。广播交易前会预执行交易，返回其结果。注意：返回成功不一定保证交易成功。<br>3.5    功能说明<br>转账、投票、发行通证、参与通证发行等。将已签名的交易信息，发送到节点，由节点验证后广播到网络中。</p>
+<h2 id="4-创建账户"><a href="#4-创建账户" class="headerlink" title="4. 创建账户"></a><h2 id="4">4. 创建账户</h2></h2><p>4.1    接口声明<br>rpc CreateAccount (AccountCreateContract) returns (Transaction){};<br>4.2    提供节点<br>fullnode。<br>4.3    参数说明<br>AccountCreateContract：包含账户类型、账户地址。<br>4.4    返回值<br>Transaction：返回包含创建账户的交易，钱包签名后再请求广播交易。<br>4.5    功能说明<br>创建账号并写入区块链。应该先离线生成一个地址，再通过该API激活该地址。</p>
+<h2 id="5-更新账户"><a href="#5-更新账户" class="headerlink" title="5. 更新账户"></a><h2 id="5">5. 更新账户</h2></h2><p>5.1    接口声明<br>rpc UpdateAccount (AccountUpdateContract) returns (Transaction){};<br>5.2    提供节点<br>fullnode。<br>5.3    参数说明<br>AccountUpdateContract：包含账户名称、账户地址。<br>5.4    返回值<br>Transaction：返回包含更新账户的交易，钱包签名后再请求广播交易。<br>5.5    功能说明<br>更新账户名称。</p>
+<h2 id="6-投票"><a href="#6-投票" class="headerlink" title="6. 投票"></a><h2 id="6">6. 投票</h2></h2><p>6.1    接口声明<br>rpc VoteWitnessAccount (VoteWitnessContract) returns (Transaction){};<br>6.2    提供节点<br>fullnode。<br>6.3    参数说明<br>VoteWitnessContract：包含投票人地址和一个投票对象列表(最多不能超过30个投票对象)，包含候选人地址和投票数。<br>6.4    返回值<br>Transaction：返回包含投票的交易，钱包签名后再请求广播交易。<br>6.5    功能说明<br>投票功能。只能对超级代表候选人进行投票，投票总数量不能大于账户锁定资金的数量，参见25 锁定资金。</p>
+<h2 id="7-通证发行"><a href="#7-通证发行" class="headerlink" title="7. 通证发行"></a><h2 id="7">7. 通证发行</h2></h2><p>7.1    接口声明<br>rpc CreateAssetIssue (AssetIssueContract) returns (Transaction) {};<br>7.2    提供节点<br>fullnode。<br>7.3    参数说明<br>AssetIssueContract：包含发行人地址、通证名称、总发行量、波场币vs通证汇兑比例、开始时间、结束时间、衰减率、投票分数、详细描述、url、每账户最多消耗带宽值，总带宽消耗值以及token冻结资产。<br>7.4    返回值<br>Transaction：返回通证发行的交易，钱包签名后再请求广播交易。<br>7.5    功能说明<br>发行通证。所有人都可以发行通证，发行通证会消耗1024个trx。发行通证后，在有效期内任何人都可以参与通证发行，用trx按照比例兑换通证。</p>
+<ul>
+<li>示例：</li>
+</ul>
+<p><code>assetissue password abc 1000000 1 1 2018-5-31 2018-6-30 abcdef a.com 1000 1000000 200000 180 300000 365</code> </p>
+<p>以上命令的发行了名为abc的资产，发行总量为100万，abc与TRX的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，<br>每个账户每天的token转账最多消耗自己1000 bandwidth points，整个网络每天最多消耗自己1000000 bandwidth points。其中20万锁仓180天，30万锁仓365天。</p>
+<h2 id="8-查询超级代表候选人列表"><a href="#8-查询超级代表候选人列表" class="headerlink" title="8. 查询超级代表候选人列表"></a><h2 id="8">8. 查询超级代表候选人列表</h2></h2><p>8.1    接口声明<br>rpc ListWitnesses (EmptyMessage) returns (WitnessList) {};<br>8.2    提供节点<br>fullnode、soliditynode。<br>8.3    参数说明<br>EmptyMessage：空。<br>8.4 返回值<br>WitnessList： Witness的列表。所有超级代表的候选人详细信息。<br>8.5    功能说明<br>投票前要查询所有候选人，并且展示出详细信息，供用户选择投票。</p>
+<h2 id="9-申请成为超级代表候选人"><a href="#9-申请成为超级代表候选人" class="headerlink" title="9. 申请成为超级代表候选人"></a><h2 id="9">9. 申请成为超级代表候选人</h2></h2><p>9.1 接口声明<br>rpc CreateWitness (WitnessCreateContract) returns (Transaction) {};<br>9.2 提供节点<br>fullnode。<br>9.3 参数说明<br>WitnessCreateContract：包含账户地址、Url。<br>9.4 返回值<br>Transaction：返回包含申请成为候选人的交易，钱包签名后再请求广播交易。<br>9.5 功能说明<br>每个波场用户都可以申请成为超级代表候选人。要求账户在区块链上已经创建。</p>
+<h2 id="10-更新超级代表候选人信息"><a href="#10-更新超级代表候选人信息" class="headerlink" title="10. 更新超级代表候选人信息"></a><h2 id="10">10. 更新超级代表候选人信息</h2></h2><p>10.1 接口声明<br>rpc UpdateWitness (WitnessUpdateContract) returns (Transaction) {};<br>10.2 提供节点<br>fullnode。<br>10.3 参数说明<br>WitnessUpdateContract：包含账户地址、Url。<br>10.4 返回值<br>Transaction：返回包含更新候选人信息的交易，钱包签名后再请求广播交易。<br>10.5 功能说明<br>更新超级代表的url。</p>
+<h2 id="11-转让通证"><a href="#11-转让通证" class="headerlink" title="11. 转让通证"></a><h2 id="11">11. 转让通证</h2></h2><p>11.1 接口声明<br>rpc TransferAsset (TransferAssetContract) returns (Transaction){};<br>11.2 提供节点<br>fullnode。<br>11.3 参数说明<br>TransferAssetContract：包含通证名称、提供方地址、接收方地址、通证数量。<br>11.4 返回值<br>Transaction：返回包含转让通证的交易，钱包签名后再请求广播交易。<br>11.5 功能说明<br>转让通证。创建一个转让通证的交易。</p>
+<h2 id="12-参与通证发行"><a href="#12-参与通证发行" class="headerlink" title="12. 参与通证发行"></a><h2 id="12">12. 参与通证发行</h2></h2><p>12.1 接口声明<br>rpc ParticipateAssetIssue (ParticipateAssetIssueContract) returns (Transaction){};<br>12.2 提供节点<br>fullnode。<br>12.3 参数说明<br>ParticipateAssetIssueContract：包含参与方地址、发行方地址、通证名称、参与金额，其中金额的单位为sun。<br>12.4 返回值<br>Transaction：返回包含参与通证发行的交易，钱包签名后再请求广播交易。<br>12.5 功能说明<br>参与通证发行。</p>
+<h2 id="13-查询所有节点"><a href="#13-查询所有节点" class="headerlink" title="13.  查询所有节点"></a><h2 id="13">13.  查询所有节点</h2></h2><p>13.1 接口声明<br>rpc ListNodes (EmptyMessage) returns (NodeList) {};<br>13.2 提供节点<br>fullnode、soliditynode。<br>13.3 参数说明<br>EmptyMessage：空。<br>13.4 返回值<br>NodeList：Node的列表，包含ip和端口。<br>13.5 功能说明<br>列举所有在线的节点ip和端口。</p>
+<h2 id="14-查询所有通证列表"><a href="#14-查询所有通证列表" class="headerlink" title="14. 查询所有通证列表"></a><h2 id="14">14. 查询所有通证列表</h2></h2><p>14.1 接口声明<br>rpc GetAssetIssueList (EmptyMessage) returns (AssetIssueList) {};<br>14.2 提供节点<br>fullnode、soliditynode。<br>14.3 参数说明<br>EmptyMessage：空<br>14.4 返回值<br>AssetIssueList： AssetIssueContract的列表。所有已发行通证详细信息。<br>14.5 功能说明<br>全部通证列表。展示所有通证，供用户选择参与。</p>
+<h2 id="15-查询某个账户发行的通证列表"><a href="#15-查询某个账户发行的通证列表" class="headerlink" title="15. 查询某个账户发行的通证列表"></a><h2 id="15">15. 查询某个账户发行的通证列表</h2></h2><p>15.1 接口声明<br>rpc GetAssetIssueByAccount (Account) returns (AssetIssueList) {};<br>15.2 提供节点<br>fullnode、soliditynode。<br>15.3 参数说明<br>Account：只需要输入address即可<br>15.4 返回值<br>AssetIssueList： AssetIssueContract的列表。<br>15.5 功能说明<br>查询某个账户发行的所有通证。</p>
+<h2 id="16-按通证名称查询通证信息"><a href="#16-按通证名称查询通证信息" class="headerlink" title="16. 按通证名称查询通证信息"></a><h2 id="16">16. 按通证名称查询通证信息</h2></h2><p>16.1 接口声明<br>rpc GetAssetIssueByName (BytesMessage) returns (AssetIssueContract) {};<br>16.2 提供节点<br>fullnode、soliditynode。<br>16.3 参数说明<br>BytesMessage：通证名称。<br>16.4 返回值<br>AssetIssueContract：通证详细信息。<br>16.5 功能说明<br>按照通证名称查询通证。通证名称在波场中确保唯一。</p>
+<h2 id="17-查询当前时间有效发行的通证列表"><a href="#17-查询当前时间有效发行的通证列表" class="headerlink" title="17. 查询当前时间有效发行的通证列表"></a><h2 id="17">17. 查询当前时间有效发行的通证列表</h2></h2><p>17.1 接口声明<br>rpc GetAssetIssueListByTimestamp (NumberMessage) returns (AssetIssueList){};<br>17.2 提供节点<br>soliditynode。<br>17.3 参数说明<br>NumberMessage：当前时间。相对于1970年的毫秒数。<br>17.4 返回值<br>AssetIssueList： AssetIssueContract的列表。所有正在发行的通证详细信息。<br>17.5 功能说明<br>全部通证列表。展示当前发行通证，供用户选择参与。</p>
+<h2 id="18-获取当前区块"><a href="#18-获取当前区块" class="headerlink" title="18. 获取当前区块"></a><h2 id="18">18. 获取当前区块</h2></h2><p>18.1 接口声明<br>rpc GetNowBlock (EmptyMessage) returns (Block) {};<br>18.2 提供节点<br>fullnode、soliditynode。<br>18.3 参数说明<br>EmptyMessage：空。<br>18.4 返回值<br>Block：当前区块信息。<br>18.5 功能说明<br>获取当前最新的区块。</p>
+<h2 id="19-按照高度获取区块"><a href="#19-按照高度获取区块" class="headerlink" title="19. 按照高度获取区块"></a><h2 id="19">19. 按照高度获取区块</h2></h2><p>19.1 接口声明<br>rpc GetBlockByNum (NumberMessage) returns (Block) {};<br>19.2 提供节点<br>fullnode、soliditynode。<br>19.3 参数说明<br>NumberMessage：区块高度。<br>19.4 返回值<br>Block：区块信息。<br>19.5 功能说明<br>获取指定高度的区块，如果找不到则返回创世区块。</p>
+<h2 id="20-获取交易总数"><a href="#20-获取交易总数" class="headerlink" title="20. 获取交易总数"></a><h2 id="20">20. 获取交易总数</h2></h2><p>20.1 接口声明<br>rpc TotalTransaction (EmptyMessage) returns (NumberMessage) {};<br>20.2 提供节点<br>fullnode、soliditynode。<br>20.3 参数说明<br>EmptyMessage：空。<br>20.4 返回值<br>NumberMessage：交易总数。<br>20.5 功能说明<br>获取交易的总数量。</p>
+<h2 id="21-通过ID查询交易"><a href="#21-通过ID查询交易" class="headerlink" title="21. 通过ID查询交易"></a><h2 id="21">21. 通过ID查询交易</h2></h2><p>21.1 接口声明<br>rpc getTransactionById (BytesMessage) returns (Transaction) {};<br>21.2 提供节点<br>soliditynode。<br>21.3 参数说明<br>BytesMessage：交易ID，也就是其Hash值。<br>21.4 返回值<br>Transaction：被查询的交易。<br>21.5 功能说明<br>通过ID查询交易的详细信息，ID就是交易数据的Hash值。</p>
+<h2 id="22-通过时间查询交易（已删除）"><a href="#22-通过时间查询交易（已删除）" class="headerlink" title="22. 通过时间查询交易（已删除）"></a><h2 id="22">22. 通过时间查询交易（已删除）</h2></h2><p>22.1 接口声明<br>rpc getTransactionsByTimestamp (TimeMessage) returns (TransactionList) {};<br>22.2 提供节点<br>soliditynode。<br>22.3 参数说明<br>TimeMessage：包含开始时间和结束时间。<br>22.4 返回值<br>TransactionList：交易列表。<br>22.5 功能说明<br>通过起止时间查询所有发生的交易。</p>
+<h2 id="23-通过地址查询所有发起交易-新版本将不再支持"><a href="#23-通过地址查询所有发起交易-新版本将不再支持" class="headerlink" title="23. 通过地址查询所有发起交易(新版本将不再支持)"></a><h2 id="23">23. 通过地址查询所有发起交易(新版本将不再支持)</h2></h2><p>23.1 接口声明<br>rpc getTransactionsFromThis (Account) returns (TransactionList) {};<br>23.2 提供节点<br>soliditynode。<br>23.3 参数说明<br>Account:发起方账户，只需要地址。<br>offset: 分页的起始值，大于10000将提示错误。<br>limit:  分页大小，最大为50，这个值可能会调整。当limit&gt;50，或offset+limit&gt;10000时，调整后满足limit&lt;=50且offset+limit&lt;=10000<br>startTime:起始时间。<br>endTime: 结束时间，获取[startTime,endTime]时间段的交易。<br>23.4 返回值<br>TransactionList：交易列表，按照交易创建时间的降序排列。<br>total: 在[startTime,endTime]时间段内允许分页的最大交易数。<br>rangeTotal: 在[startTime,endTime]时间段内的所有交易数，则默认返回最近7天的数据。<br>23.5 功能说明<br>通过账户地址查询所有发起的交易。<br>23.6 备注说明<br>该接口在新版本节点中将不再提供，如需要该功能，可以使用中心节点提供的接口，47.90.247.237:8091/walletextension/gettransactionsfromthis,<br>使用参考getTransactionsFromThis。</p>
+<h2 id="24-通过地址查询所有接收交易-新版本将不再支持"><a href="#24-通过地址查询所有接收交易-新版本将不再支持" class="headerlink" title="24. 通过地址查询所有接收交易(新版本将不再支持)"></a><h2 id="24">24. 通过地址查询所有接收交易(新版本将不再支持)</h2></h2><p>24.1 接口声明<br>rpc getTransactionsToThis (Account) returns (NumberMessage) {};<br>24.2 提供节点<br>soliditynode。<br>24.3 参数说明<br>Account：接收方账户，只需要地址。<br>offset: 分页的起始值，大于10000将提示错误。<br>limit:  分页大小，最大为50，这个值可能会调整。当limit&gt;50，或offset+limit&gt;10000时，调整后满足limit&lt;=50且offset+limit&lt;=10000<br>startTime:起始时间。<br>endTime: 结束时间，获取[startTime,endTime]时间段的交易，如果不传递，则默认返回最近7天的数据。<br>24.4 返回值<br>TransactionList：交易列表,按照交易创建时间的降序排列。<br>total: 在[startTime,endTime]时间段内允许分页的最大交易数。<br>rangeTotal: 在[startTime,endTime]时间段内的所有交易数。<br>24.5 功能说明<br>通过账户地址查询所有其它账户发起和本账户有关的交易。<br>24.6 备注说明<br>该接口在新版本节点中将不再提供，如需要该功能，可以使用中心节点提供的接口，47.90.247.237:8091/walletextension/gettransactionstothis,<br>使用参考getTransactionsToThis。</p>
+<h2 id="25-锁定资金"><a href="#25-锁定资金" class="headerlink" title="25. 锁定资金"></a><h2 id="25">25. 锁定资金</h2></h2><p>25.1 接口声明<br>rpc FreezeBalance (FreezeBalanceContract) returns (Transaction) {};<br>25.2 提供节点<br>fullnode。<br>25.3 参数说明<br>FreezeBalanceContract：包含地址、锁定资金、锁定时间。目前锁定时间只能是3天。<br>25.4 返回值<br>Transaction：返回包含资金的交易，钱包签名后再请求广播交易。<br>25.5 功能说明<br>锁定资金将带来两个收益：<br>a.获得带宽。<br>b.获得投票的权利。</p>
+<h2 id="26-解除资金锁定"><a href="#26-解除资金锁定" class="headerlink" title="26. 解除资金锁定"></a><h2 id="26">26. 解除资金锁定</h2></h2><p>26.1 接口声明<br>rpc UnfreezeBalance (UnfreezeBalanceContract) returns (Transaction) {};<br>26.2 提供节点<br>fullnode。<br>26.3 参数说明<br>UnfreezeBalanceContract：包含地址。<br>26.4 返回值<br>Transaction：返回交易，钱包签名后再请求广播交易。<br>26.5 功能说明<br>锁定资金3天之后才允许解除锁定。解除锁定，将清除投票记录和带宽。</p>
+<h2 id="27-赎回出块奖励"><a href="#27-赎回出块奖励" class="headerlink" title="27. 赎回出块奖励"></a><h2 id="27">27. 赎回出块奖励</h2></h2><p>27.1 接口声明<br>rpc WithdrawBalance (WithdrawBalanceContract) returns (Transaction) {};<br>27.2 提供节点<br>fullnode。<br>27.3 参数说明<br>WithdrawBalanceContract：包含地址。<br>27.4 返回值<br>Transaction：返回交易，钱包签名后再请求广播交易。<br>27.5 功能说明<br>本接口仅提供给超级代表。超级代表记账成功后，将获得奖励，奖励不直接增加到账户余额上。每24小时允许提取一次到账户余额。</p>
+<h2 id="28-解冻通证"><a href="#28-解冻通证" class="headerlink" title="28. 解冻通证"></a><h2 id="28">28. 解冻通证</h2></h2><p>28.1 接口声明<br>rpc UnfreezeAsset (UnfreezeAssetContract) returns (Transaction) {};<br>28.2 提供节点<br>fullnode。<br>28.3 参数说明<br>UnfreezeAssetContract：包含地址。<br>28.4 返回值<br>Transaction：返回交易，钱包签名后再请求广播交易。<br>28.5 功能说明<br>通证发行者解冻发行时冻结的通证。</p>
+<h2 id="29-查询下次维护时刻"><a href="#29-查询下次维护时刻" class="headerlink" title="29. 查询下次维护时刻"></a><h2 id="29">29. 查询下次维护时刻</h2></h2><p>29.1 接口声明<br>rpc GetNextMaintenanceTime (EmptyMessage) returns (NumberMessage) {};<br>29.2 提供节点<br>fullnode。<br>29.3 参数说明<br>EmptyMessage：无需参数<br>29.4 返回值<br>NumberMessage：下次维护时刻<br>29.5 功能说明<br>获取下次维护时刻</p>
+<h2 id="30-查询交易信息"><a href="#30-查询交易信息" class="headerlink" title="30. 查询交易信息"></a><h2 id="30">30. 查询交易信息</h2></h2><p>30.1 接口声明<br>rpc GetTransactionInfoById (BytesMessage) returns (TransactionInfo) {};<br>30.2 提供节点<br>soliditynode。<br>30.3 参数说明<br>BytesMessage：交易ID<br>30.4 返回值<br>TransactionInfo：交易信息<br>30.5 功能说明<br>查询交易的费用、所在区块、所在区块时间戳</p>
+<h2 id="31-根据ID查询区块"><a href="#31-根据ID查询区块" class="headerlink" title="31.  根据ID查询区块"></a><h2 id="31">31.  根据ID查询区块</h2></h2><p>31.1 接口声明<br>rpc GetBlockById (BytesMessage) returns (Block) {};<br>31.2 提供节点<br>fullnode。<br>31.3 参数说明<br>BytesMessage：区块ID<br>31.4 返回值<br>Block：区块<br>31.5 功能说明<br>根据输入的区块的ID查询区块</p>
+<h2 id="32-更新通证"><a href="#32-更新通证" class="headerlink" title="32.  更新通证"></a><h2 id="32">32.  更新通证</h2></h2><p>32.1 接口声明<br>rpc UpdateAsset (UpdateAssetContract) returns (Transaction) {};<br>32.2 提供节点<br>fullnode。<br>32.3 参数说明<br>UpdateAssetContract：包括通证发行者的地址、通证的描述、通证的url、每账户最多消耗带宽值、总带宽消耗值<br>32.4 返回值<br>Transaction：返回交易，钱包签名后再请求广播交易。<br>32.5 功能说明<br>只能由通证发行者发起，更新通证的描述、通证的url、每账户最多消耗带宽值、总带宽消耗值</p>
+<h2 id="33-分页查询通证列表"><a href="#33-分页查询通证列表" class="headerlink" title="33. 分页查询通证列表"></a><h2 id="33">33. 分页查询通证列表</h2></h2><p>33.1 接口声明<br>rpc GetPaginatedAssetIssueList (PaginatedMessage) returns (AssetIssueList) {};<br>33.2 提供节点<br>fullnode、soliditynode。<br>33.3 参数说明<br>PaginatedMessage：起始查询下标 （从下标0开始计算）， 一页所取得的通证个数<br>33.4 返回值<br>AssetIssueList： AssetIssueContract的分页列表，发行通证详细信息。<br>33.5 功能说明<br>分页通证列表。分页展示通证，供用户选择参与。</p>
+<h2 id="34-对交易进行签名"><a href="#34-对交易进行签名" class="headerlink" title="34. 对交易进行签名"></a><h2 id="34">34. 对交易进行签名</h2></h2><p>34.1 接口说明<br>rpc GetTransactionSign (TransactionSign) returns (Transaction) {};<br>34.2 提供节点<br>fullnode<br>34.3 参数说明<br>TransactionSign：待签名Transaction对象和签名用的private key<br>34.4 返回值<br>Transaction：签名的Transaction对象</p>
+<h2 id="35-创建地址和秘钥"><a href="#35-创建地址和秘钥" class="headerlink" title="35. 创建地址和秘钥"></a><h2 id="35">35. 创建地址和秘钥</h2></h2><p>35.1 接口说明<br>rpc CreateAdresss (BytesMessage) returns (BytesMessage) {};<br>35.2 提供节点<br>fullnode<br>35.3 参数说明<br>BytesMessage：Passphrase<br>35.4 返回值<br>BytesMessage：地址</p>
+<h2 id="36-TRX快捷转账"><a href="#36-TRX快捷转账" class="headerlink" title="36. TRX快捷转账"></a><h2 id="36">36. TRX快捷转账</h2></h2><p>36.1 接口说明<br>rpc EasyTransfer (EasyTransferMessage) returns (EasyTransferResponse) {};<br>36.2 提供节点<br>fullnode<br>36.3 参数说明<br>EasyTransferMessage：转账用的密码，toAddress，转账的数量<br>36.4 返回值<br>EasyTransferResponse：转账创建的transaction，交易ID，以及广播的结果result</p>
+<h2 id="37-生成地址和私钥"><a href="#37-生成地址和私钥" class="headerlink" title="37. 生成地址和私钥"></a><h2 id="37">37. 生成地址和私钥</h2></h2><p>37.1 接口说明<br>rpc GenerateAddress (EmptyMessage) returns (AddressPrKeyPairMessage) {};<br>37.2 提供节点<br>fullnode, soliditynode<br>37.3 参数说明<br>EmptyMessage：空<br>37.4 返回值<br>AddressPrKeyPairMessage：生成地址，生成私钥<br>37.5 功能说明<br>可用于生成地址和私钥，请务必仅在受信断网节点调用，以免私钥外泄</p>
+<h2 id="38-转让波场币2"><a href="#38-转让波场币2" class="headerlink" title="38. 转让波场币2"></a><h2 id="38">38. 转让波场币2</h2></h2><p>38.1    接口声明<br>rpc CreateTransaction2 (TransferContract) returns (TransactionExtention)　{};<br>38.2    提供节点<br>fullnode。<br>38.3    参数说明<br>TransferContract：包含提供方地址、接收方地址、金额，其中金额的单位为sun。<br>38.4    返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>38.5    功能说明<br>转账。创建一个转账的交易。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="39-更新账户2"><a href="#39-更新账户2" class="headerlink" title="39. 更新账户2"></a><h2 id="39">39. 更新账户2</h2></h2><p>39.1    接口声明<br>rpc UpdateAccount2 (AccountUpdateContract) returns (TransactionExtention){};<br>39.2    提供节点<br>fullnode。<br>39.3    参数说明<br>AccountUpdateContract：包含账户名称、账户地址。<br>39.4    返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>39.5    功能说明<br>更新账户名称。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="40-投票2"><a href="#40-投票2" class="headerlink" title="40. 投票2"></a><h2 id="40">40. 投票2</h2></h2><p>40.1    接口声明<br>rpc VoteWitnessAccount2 (VoteWitnessContract) returns (TransactionExtention){};<br>40.2    提供节点<br>fullnode。<br>40.3    参数说明<br>VoteWitnessContract：包含投票人地址和一个投票对象列表(最多不能超过30个投票对象)，包含候选人地址和投票数。<br>40.4    返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>40.5    功能说明<br>投票功能。只能对超级代表候选人进行投票，投票总数量不能大于账户锁定资金的数量，参见25 锁定资金。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="41-通证发行2"><a href="#41-通证发行2" class="headerlink" title="41. 通证发行2"></a><h2 id="41">41. 通证发行2</h2></h2><p>41.1    接口声明<br>rpc CreateAssetIssue2 (AssetIssueContract) returns (TransactionExtention) {};<br>41.2    提供节点<br>fullnode。<br>41.3    参数说明<br>AssetIssueContract：包含发行人地址、通证名称、总发行量、波场币vs通证汇兑比例、开始时间、结束时间、衰减率、投票分数、详细描述、url、每账户最多消耗带宽值，总带宽消耗值以及token冻结资产。<br>41.4    返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>41.5    功能说明<br>发行通证。所有人都可以发行通证，发行通证会消耗1024个trx。发行通证后，在有效期内任何人都可以参与通证发行，用trx按照比例兑换通证。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<ul>
+<li>示例：</li>
+</ul>
+<p><code>assetissue password abc 1000000 1 1 2018-5-31 2018-6-30 abcdef a.com 1000 1000000 200000 180 300000 365</code> </p>
+<p>以上命令的发行了名为abc的资产，发行总量为100万，abc与TRX的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，<br>每个账户每天的token转账最多消耗自己1000 bandwidth points，整个网络每天最多消耗自己1000000 bandwidth points。其中20万锁仓180天，30万锁仓365天。</p>
+<h2 id="42-更新超级代表候选人信息2"><a href="#42-更新超级代表候选人信息2" class="headerlink" title="42. 更新超级代表候选人信息2"></a><h2 id="42">42. 更新超级代表候选人信息2</h2></h2><p>42.1 接口声明<br>rpc UpdateWitness2 (WitnessUpdateContract) returns (TransactionExtention) {};<br>42.2 提供节点<br>fullnode。<br>42.3 参数说明<br>WitnessUpdateContract：包含账户地址、Url。<br>42.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>42.5 功能说明<br>更新超级代表的url。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="43-创建账户2"><a href="#43-创建账户2" class="headerlink" title="43. 创建账户2"></a><h2 id="43">43. 创建账户2</h2></h2><p>43.1    接口声明<br>rpc CreateAccount2 (AccountCreateContract) returns (TransactionExtention){};<br>43.2    提供节点<br>fullnode。<br>43.3    参数说明<br>AccountCreateContract：包含账户类型、账户地址。<br>43.4    返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>43.5    功能说明<br>创建账号并写入区块链。应该先离线生成一个地址，再通过该API激活该地址。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="44-申请成为超级代表候选人2"><a href="#44-申请成为超级代表候选人2" class="headerlink" title="44. 申请成为超级代表候选人2"></a><h2 id="44">44. 申请成为超级代表候选人2</h2></h2><p>44.1 接口声明<br>rpc CreateWitness2 (WitnessCreateContract) returns (TransactionExtention) {};<br>44.2 提供节点<br>fullnode。<br>44.3 参数说明<br>WitnessCreateContract：包含账户地址、Url。<br>44.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>44.5 功能说明<br>每个波场用户都可以申请成为超级代表候选人。要求账户在区块链上已经创建。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="45-转让通证2"><a href="#45-转让通证2" class="headerlink" title="45. 转让通证2"></a><h2 id="45">45. 转让通证2</h2></h2><p>45.1 接口声明<br>rpc TransferAsset2 (TransferAssetContract) returns (TransactionExtention){};<br>45.2 提供节点<br>fullnode。<br>45.3 参数说明<br>TransferAssetContract：包含通证名称、提供方地址、接收方地址、通证数量。<br>45.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>45.5 功能说明<br>转让通证。创建一个转让通证的交易。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="46-参与通证发行2"><a href="#46-参与通证发行2" class="headerlink" title="46. 参与通证发行2"></a><h2 id="46">46. 参与通证发行2</h2></h2><p>46.1 接口声明<br>rpc ParticipateAssetIssue2 (ParticipateAssetIssueContract) returns (TransactionExtention){};<br>46.2 提供节点<br>fullnode。<br>46.3 参数说明<br>ParticipateAssetIssueContract：包含参与方地址、发行方地址、通证名称、参与金额，其中金额的单位为sun。<br>46.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>46.5 功能说明<br>参与通证发行。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="47-锁定资金2"><a href="#47-锁定资金2" class="headerlink" title="47. 锁定资金2"></a><h2 id="47">47. 锁定资金2</h2></h2><p>47.1 接口声明<br>rpc FreezeBalance2 (FreezeBalanceContract) returns (TransactionExtention) {};<br>47.2 提供节点<br>fullnode。<br>47.3 参数说明<br>FreezeBalanceContract：包含地址、锁定资金、锁定时间。目前锁定时间只能是3天。<br>47.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>47.5 功能说明<br>锁定资金将带来两个收益：<br>a.获得带宽。<br>b.获得投票的权利。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="48-解除资金锁定2"><a href="#48-解除资金锁定2" class="headerlink" title="48. 解除资金锁定2"></a><h2 id="48">48. 解除资金锁定2</h2></h2><p>48.1 接口声明<br>rpc UnfreezeBalance2 (UnfreezeBalanceContract) returns (TransactionExtention) {};<br>48.2 提供节点<br>fullnode。<br>48.3 参数说明<br>UnfreezeBalanceContract：包含地址。<br>48.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>48.5 功能说明<br>锁定资金3天之后才允许解除锁定。解除锁定，将清除投票记录和带宽。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="49-解冻通证2"><a href="#49-解冻通证2" class="headerlink" title="49. 解冻通证2"></a><h2 id="49">49. 解冻通证2</h2></h2><p>49.1 接口声明<br>rpc UnfreezeAsset2 (UnfreezeAssetContract) returns (TransactionExtention) {};<br>49.2 提供节点<br>fullnode。<br>49.3 参数说明<br>UnfreezeAssetContract：包含地址。<br>49.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>49.5 功能说明<br>通证发行者解冻发行时冻结的通证。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="50-赎回出块奖励2"><a href="#50-赎回出块奖励2" class="headerlink" title="50. 赎回出块奖励2"></a><h2 id="50">50. 赎回出块奖励2</h2></h2><p>50.1 接口声明<br>rpc WithdrawBalance2 (WithdrawBalanceContract) returns (TransactionExtention) {};<br>50.2 提供节点<br>fullnode。<br>50.3 参数说明<br>WithdrawBalanceContract：包含地址。<br>50.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>50.5 功能说明<br>本接口仅提供给超级代表。超级代表记账成功后，将获得奖励，奖励不直接增加到账户余额上。每24小时允许提取一次到账户余额。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="51-更新通证2"><a href="#51-更新通证2" class="headerlink" title="51.  更新通证2"></a><h2 id="51">51.  更新通证2</h2></h2><p>51.1 接口声明<br>rpc UpdateAsset2 (UpdateAssetContract) returns (TransactionExtention) {};<br>51.2 提供节点<br>fullnode。<br>51.3 参数说明<br>UpdateAssetContract：包括通证发行者的地址、通证的描述、通证的url、每账户最多消耗带宽值、总带宽消耗值<br>51.4 返回值<br>TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。<br>51.5 功能说明<br>只能由通证发行者发起，更新通证的描述、通证的url、每账户最多消耗带宽值、总带宽消耗值<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="52-获取当前区块2"><a href="#52-获取当前区块2" class="headerlink" title="52. 获取当前区块2"></a><h2 id="52">52. 获取当前区块2</h2></h2><p>52.1 接口声明<br>rpc GetNowBlock2 (EmptyMessage) returns (BlockExtention) {};<br>52.2 提供节点<br>fullnode、soliditynode。<br>52.3 参数说明<br>EmptyMessage：空。<br>52.4 返回值<br>BlockExtention：当前区块信息，包含区块id。<br>52.5 功能说明<br>获取当前最新的区块。</p>
+<h2 id="53-按照高度获取区块2"><a href="#53-按照高度获取区块2" class="headerlink" title="53. 按照高度获取区块2"></a><h2 id="53">53. 按照高度获取区块2</h2></h2><p>53.1 接口声明<br>rpc GetBlockByNum2 (NumberMessage) returns (BlockExtention) {};<br>53.2 提供节点<br>fullnode、soliditynode。<br>53.3 参数说明<br>NumberMessage：区块高度。<br>53.4 返回值<br>BlockExtention：区块信息，包含区块id。<br>53.5 功能说明<br>获取指定高度的区块，如果找不到则返回创世区块。</p>
+<h2 id="54-分页获取区块2"><a href="#54-分页获取区块2" class="headerlink" title="54. 分页获取区块2"></a><h2 id="54">54. 分页获取区块2</h2></h2><p>54.1 接口声明<br>rpc GetBlockByLimitNext2 (BlockLimit) returns (BlockListExtention) {};<br>54.2 提供节点<br>fullnode<br>54.3 参数说明<br>BlockLimit：区块起止范围。<br>54.4 返回值<br>BlockListExtention：区块列表。<br>54.5 功能说明<br>根据范围查询区块，用与分页查询所有区块。</p>
+<h2 id="55-查询最后区块2"><a href="#55-查询最后区块2" class="headerlink" title="55. 查询最后区块2"></a><h2 id="55">55. 查询最后区块2</h2></h2><p>55.1 接口声明<br>rpc GetBlockByLatestNum2 (NumberMessage) returns (BlockListExtention) {};<br>55.2 提供节点<br>fullnode<br>55.3 参数说明<br>NumberMessage：需要查询的区块数量。<br>55.4 返回值<br>BlockListExtention：区块列表。<br>55.5 功能说明<br>查询最后的一定数量的区块。</p>
+<h2 id="56-对交易进行签名2"><a href="#56-对交易进行签名2" class="headerlink" title="56. 对交易进行签名2"></a><h2 id="56">56. 对交易进行签名2</h2></h2><p>56.1 接口说明<br>rpc GetTransactionSign2 (TransactionSign) returns (TransactionExtention) {};<br>56.2 提供节点<br>fullnode<br>56.3 参数说明<br>TransactionSign：待签名Transaction对象和签名用的private key<br>56.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>56.5    功能说明<br>使用API对交易进行签名。<br>注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。</p>
+<h2 id="57-通过地址查询所有发起交易2"><a href="#57-通过地址查询所有发起交易2" class="headerlink" title="57. 通过地址查询所有发起交易2"></a><h2 id="57">57. 通过地址查询所有发起交易2</h2></h2><p>57.1 接口声明<br>GetTransactionsFromThis2 (AccountPaginated) returns (TransactionListExtention) {};<br>57.2 提供节点<br>soliditynode。<br>57.3 参数说明<br>AccountPaginated：发起方账户地址及查询范围。<br>57.4 返回值<br>TransactionListExtention：交易列表。<br>57.5 功能说明<br>通过账户地址查询所有发起的交易。</p>
+<h2 id="58-通过地址查询所有接收交易2"><a href="#58-通过地址查询所有接收交易2" class="headerlink" title="58. 通过地址查询所有接收交易2"></a><h2 id="58">58. 通过地址查询所有接收交易2</h2></h2><p>58.1 接口声明<br>rpc GetTransactionsFromThis2 (AccountPaginated) returns (TransactionListExtention) {};<br>58.2 提供节点<br>soliditynode。<br>58.3 参数说明<br>AccountPaginated：发起方账户地址及查询范围。<br>58.4 返回值<br>TransactionListExtention：交易列表。<br>58.5 功能说明<br>通过账户地址查询所有其它账户发起和本账户有关的交易。</p>
+<h2 id="59-创建交易对"><a href="#59-创建交易对" class="headerlink" title="59. 创建交易对"></a><h2 id="59">59. 创建交易对</h2></h2><p>59.1 接口声明<br>rpc ExchangeCreate (ExchangeCreateContract) returns (TransactionExtention) {};<br>59.2 提供节点<br>fullnode。<br>59.3 参数说明<br>first_token_id，第1种token的id<br>first_token_balance，第1种token的balance<br>second_token_id，第2种token的id<br>second_token_balance，第2种token的balance<br>59.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>59.5 功能说明<br>创建交易对</p>
+<h2 id="60-交易所注资"><a href="#60-交易所注资" class="headerlink" title="60. 交易所注资"></a><h2 id="60">60. 交易所注资</h2></h2><p>60.1 接口声明<br>rpc ExchangeInject (ExchangeInjectContract) returns (TransactionExtention) {};<br>60.2 提供节点<br>fullnode。<br>60.3 参数说明<br>exchange_id：交易对id<br>token_id：注资的token的id<br>quant：注资数量<br>60.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>60.5 功能说明<br>对交易对进行注资</p>
+<h2 id="61-交易所撤资"><a href="#61-交易所撤资" class="headerlink" title="61. 交易所撤资"></a><h2 id="61">61. 交易所撤资</h2></h2><p>61.1 接口声明<br>rpc ExchangeWithdraw (ExchangeWithdrawContract) returns (TransactionExtention) {};<br>61.2 提供节点<br>fullnode。<br>61.3 参数说明<br>exchange_id：交易对id<br>token_id：撤资的token的id<br>quant：撤资数量<br>61.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>61.5 功能说明<br>对交易对进行撤资</p>
+<h2 id="62-交易所交易"><a href="#62-交易所交易" class="headerlink" title="62. 交易所交易"></a><h2 id="62">62. 交易所交易</h2></h2><p>62.1 接口声明<br>rpc ExchangeTransaction (ExchangeTransactionContract) returns (TransactionExtention) {};<br>62.2 提供节点<br>fullnode。<br>62.3 参数说明<br>exchange_id：交易对id<br>token_id：撤资的token的id<br>quant：撤资数量<br>expected：期望得到的另一个token的最小金额<br>62.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>62.5 功能说明<br>交易</p>
+<h2 id="63-查询所有交易对"><a href="#63-查询所有交易对" class="headerlink" title="63. 查询所有交易对"></a><h2 id="63">63. 查询所有交易对</h2></h2><p>63.1 接口声明<br>rpc ListExchanges (EmptyMessage) returns (ExchangeList) {};<br>63.2 提供节点<br>fullnode。<br>63.3 参数说明<br>无<br>63.4 返回值<br>ExchangeList：所有交易对。<br>63.5 功能说明 </p>
+<h2 id="64-查询指定交易对"><a href="#64-查询指定交易对" class="headerlink" title="64. 查询指定交易对"></a><h2 id="64">64. 查询指定交易对</h2></h2><p>64.1 接口声明<br>rpc GetExchangeById (BytesMessage) returns (Exchange) {};<br>64.2 提供节点<br>fullnode。<br>64.3 参数说明<br>value：交易对id<br>64.4 返回值<br>Exchange：交易对。<br>64.5 功能说明 </p>
+<h2 id="65-分页查询交易对"><a href="#65-分页查询交易对" class="headerlink" title="65. 分页查询交易对"></a><h2 id="65">65. 分页查询交易对</h2></h2><p>65.1 接口声明<br>rpc GetPaginatedExchangeList (PaginatedMessage) returns (ExchangeList) {};<br>65.2 提供节点<br>fullnode。<br>65.3 参数说明<br>offset：偏移量<br>limit：个数限制<br>65.4 返回值<br>Exchange：交易对。<br>65.5 功能说明 </p>
+<h2 id="66-创建提议"><a href="#66-创建提议" class="headerlink" title="66. 创建提议"></a><h2 id="66">66. 创建提议</h2></h2><p>66.1 接口声明<br>rpc ProposalCreate (ProposalCreateContract) returns (TransactionExtention) {};<br>66.2 提供节点<br>fullnode。<br>66.3 参数说明<br>parameters：提议参数<br>66.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>66.5 功能说明 </p>
+<h2 id="67-赞成提议"><a href="#67-赞成提议" class="headerlink" title="67. 赞成提议"></a><h2 id="67">67. 赞成提议</h2></h2><p>67.1 接口声明<br>rpc ProposalApprove (ProposalApproveContract) returns (TransactionExtention) {};<br>67.2 提供节点<br>fullnode。<br>67.3 参数说明<br>proposal_id ：提议id<br>is_add_approval ：赞成或取消赞成<br>67.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>67.5 功能说明 </p>
+<h2 id="68-删除提议"><a href="#68-删除提议" class="headerlink" title="68. 删除提议"></a><h2 id="68">68. 删除提议</h2></h2><p>68.1 接口声明<br>rpc ProposalDelete (ProposalDeleteContract) returns (TransactionExtention) {};<br>68.2 提供节点<br>fullnode。<br>68.3 参数说明<br>proposal_id ：提议id<br>68.4 返回值<br>TransactionExtention：返回签名后的交易、交易ID、操作结果等。<br>68.5 功能说明 </p>
+<h2 id="69-查询所有提议"><a href="#69-查询所有提议" class="headerlink" title="69. 查询所有提议"></a><h2 id="69">69. 查询所有提议</h2></h2><p>69.1 接口声明<br>rpc ListProposals (EmptyMessage) returns (ProposalList) {};<br>69.2 提供节点<br>fullnode。<br>69.3 参数说明<br>无<br>69.4 返回值<br>ProposalList：提议列表<br>69.5 功能说明 </p>
+<h2 id="70-分页查询提议"><a href="#70-分页查询提议" class="headerlink" title="70. 分页查询提议"></a><h2 id="70">70. 分页查询提议</h2></h2><p>70.1 接口声明<br>rpc GetPaginatedProposalList (PaginatedMessage) returns (ProposalList) {};<br>70.2 提供节点<br>fullnode。<br>70.3 参数说明<br>offset：偏移量<br>limit：个数限制<br>70.4 返回值<br>ProposalList：提议列表<br>70.5 功能说明 </p>
+<h2 id="71-查询指定提议"><a href="#71-查询指定提议" class="headerlink" title="71. 查询指定提议"></a><h2 id="71">71. 查询指定提议</h2></h2><p>71.1 接口声明<br>rpc GetProposalById (BytesMessage) returns (Proposal) {};<br>71.2 提供节点<br>fullnode。<br>71.3 参数说明<br>proposal_id ：提议id<br>71.4 返回值<br>ProposalList：提议列表<br>71.5 功能说明 </p>
+<h2 id="72-查询资源委派账户索引"><a href="#72-查询资源委派账户索引" class="headerlink" title="72. 查询资源委派账户索引"></a><h2 id="72">72. 查询资源委派账户索引</h2></h2><p>72.1 接口声明<br>rpc GetDelegatedResourceAccountIndex (BytesMessage) returns (DelegatedResourceAccountIndex) { };\<br>72.2 提供节点<br>fullnode。<br>72.3 参数说明<br>BytesMessage ：查询的账户地址\<br>72.4 返回值<br>account：查询的地址 \<br>fromAccounts：从哪些账户中获得了资源 \<br>toAccounts：给哪些账户中委派了资源\<br>72.5 功能说明 </p>
+<h2 id="73-查询资源委派的详细信息"><a href="#73-查询资源委派的详细信息" class="headerlink" title="73. 查询资源委派的详细信息"></a><h2 id="73">73. 查询资源委派的详细信息</h2></h2><p>73.1 接口声明<br>rpc GetDelegatedResource (DelegatedResourceMessage) returns (DelegatedResourceList) {<br>  };\<br>73.2 提供节点<br>fullnode。<br>73.3 参数说明<br>fromAddress ：资源委派发起地址 \<br>toAddress ：资源委派接受地址\<br>73.4 返回值<br>DelegatedResourceList:只包含一个元素 \<br>from:发起资源委派的地址\<br>to:接受资源委派的地址\<br>frozen_balance_for_bandwidth:委派的带宽\<br>frozen_balance_for_energy:委派的energy\<br>expire_time_for_bandwidth:委派的带宽解冻时间\<br>expire_time_for_energy:委派的energy解冻时间\<br>73.5 功能说明  </p>
+<h2 id="74-通证快捷转账"><a href="#74-通证快捷转账" class="headerlink" title="74. 通证快捷转账"></a><h2 id="74">74. 通证快捷转账</h2></h2><p>74.1 接口说明<br>rpc EasyTransferAsset (EasyTransferAssetMessage) returns (EasyTransferResponse) {};<br>74.2 提供节点<br>fullnode<br>74.3 参数说明<br>EasyTransferAssetMessage：转账用的密码，toAddress，通证ID，转账的数量<br>74.4 返回值<br>EasyTransferResponse：转账创建的transaction，交易ID，以及广播的结果result</p>
+<h2 id="75-通证快捷转账（通过私钥）"><a href="#75-通证快捷转账（通过私钥）" class="headerlink" title="75. 通证快捷转账（通过私钥）"></a><h2 id="75">75. 通证快捷转账（通过私钥）</h2></h2><p>75.1 接口说明<br>rpc EasyTransferAssetByPrivate (EasyTransferAssetByPrivateMessage) returns (EasyTransferResponse) {};<br>75.2 提供节点<br>fullnode<br>75.3 参数说明<br>EasyTransferAssetByPrivateMessage：转账用的私钥，toAddress，通证ID，转账的数量<br>75.4 返回值<br>EasyTransferResponse：转账创建的transaction，交易ID，以及广播的结果result</p>
+<h2 id="76-更新用户权限（用于多重签名）"><a href="#76-更新用户权限（用于多重签名）" class="headerlink" title="76. 更新用户权限（用于多重签名）"></a><h2 id="76">76. 更新用户权限（用于多重签名）</h2></h2><p>76.1 接口说明<br>rpc AccountPermissionUpdate (AccountPermissionUpdateContract) returns (TransactionExtention)  {}\<br>76.2 提供节点<br>fullnode<br>76.3 参数说明<br>owner_address：待修改权限的账户的地址\<br>owner：修改后的 owner 权限\<br>witness：修改后的 witness 权限（如果是 witness ）\<br>actives：修改后的 actives 权限</p>
+<p>76.4 返回值<br>TransactionExtention：转账创建的transaction，交易ID，以及广播的结果result</p>
+<h2 id="77-增加签名（用于多重签名）"><a href="#77-增加签名（用于多重签名）" class="headerlink" title="77. 增加签名（用于多重签名）"></a><h2 id="77">77. 增加签名（用于多重签名）</h2></h2><p>77.1 接口说明<br>rpc AddSign (TransactionSign) returns (TransactionExtention) {}\<br>77.2 提供节点<br>fullnode<br>77.3 参数说明<br>TransactionSign：交易，私钥<br>77.4 返回值<br>TransactionExtention：转账创建的transaction，交易ID，以及广播的结果result</p>
+<h2 id="78-查询已签名地址（用于多重签名）"><a href="#78-查询已签名地址（用于多重签名）" class="headerlink" title="78. 查询已签名地址（用于多重签名）"></a><h2 id="78">78. 查询已签名地址（用于多重签名）</h2></h2><p>78.1 接口说明<br>rpc GetTransactionApprovedList(Transaction) returns (TransactionApprovedList)   {}\<br>78.2 提供节点<br>fullnode<br>78.3 参数说明<br>Transaction：交易\<br>78.4 返回值<br>TransactionApprovedList：已签名的地址，交易</p>
+<h2 id="79-查询交易签名权重（用于多重签名）"><a href="#79-查询交易签名权重（用于多重签名）" class="headerlink" title="79. 查询交易签名权重（用于多重签名）"></a><h2 id="79">79. 查询交易签名权重（用于多重签名）</h2></h2><p>79.1 接口说明<br>rpc GetTransactionSignWeight (Transaction) returns (TransactionSignWeight) {}\<br>79.2 提供节点<br>fullnode<br>79.3 参数说明<br>Transaction：交易\<br>79.4 返回值<br>TransactionSignWeight：结果result（交易的签名是否满足权限阈值）</p>
+<h2 id="80-部署智能合约"><a href="#80-部署智能合约" class="headerlink" title="80. 部署智能合约"></a><h2 id="80">80. 部署智能合约</h2></h2><p>80.1 接口说明<br>rpc DeployContract (CreateSmartContract) returns (TransactionExtention) {};\<br>80.2 提供节点<br>fullnode<br>80.3 参数说明<br>CreateSmartContract：提供创建合约信息的交易类型对象，包含owner_address(交易发送者地址), new_contract（SmartContract类型对象）, call_token_value(trc10), token_id(trc10) 4个参数\<br>附new_contract: smartcontract信息，包括，origin_address（合约部署者地址）， contract_address（合约地址，默认为空），abi，bytecode，call_value（trx放入合约数量），consume_user_resource_percent（调用合约时用户方需支付的energy占所有花费比例）， name（合约名字）， origin_energy_limit（开发者愿意帮助用户支付的最高energy数量) \<br>80.4 返回值<br>TransactionExtention：展示交易执行结果的信息类型对象，包含transaction, transaction_id, constant_result 以及 on-block result.</p>
+<h2 id="81-执行智能合约"><a href="#81-执行智能合约" class="headerlink" title="81. 执行智能合约"></a><h2 id="81">81. 执行智能合约</h2></h2><p>81.1 接口说明<br>rpc TriggerContract (TriggerSmartContract) returns (TransactionExtention) {};\<br>81.2 提供节点<br>fullnode<br>81.3 参数说明<br>TriggerSmartContract：提供执行合约信息的交易类型对象，包含owner_address(交易发送者地址), contract_address, call_value(随交易打入合约的trx数量), data(被调用的方法的签名及参数), call_token_value(trc10数量), token_id(trc10 id) 6个参数\<br>81.4 返回值<br>TransactionExtention：展示交易执行结果的信息类型对象，包含transaction, transaction_id, constant_result 以及 on-block result.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.trxbi.com/2019/06/05/tron/波场钱包RPC-API/" data-id="cjxcwb0ug000rsffm7iyzfbu2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/波场协议/">波场协议</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/05/tron/交易简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          交易简介
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/05/tron/波场手册/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">波场手册</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          
+            <aside id="sidebar">
+  
+    
+  
+    
+    <div class="widget-wrap">
+      <h3 class="widget-title">Related</h3>
+      <div class="widget recents">
+        <ul>
+  
+    <li>
+      <a href="/2019/06/05/tron/波场去中心化交易所/">波场去中心化交易所</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/交易操作类型说明/">交易操作类型说明</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/冻结与投票/">冻结与投票</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/多重签名/">多重签名</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/交易简介/">交易简介</a>
+    </li>
+  
+        </ul>
+      </div>
+    </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/05/tron/波场去中心化交易所/">波场去中心化交易所</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/buffett/">致社区的一封公开信：沃伦 · 巴菲特慈善午宴</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/One_Page/">波场介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/交易操作类型说明/">交易操作类型说明</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/创建账户/">创建账户</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/波场介绍/" style="font-size: 10px;">波场介绍</a> <a href="/tags/波场协议/" style="font-size: 20px;">波场协议</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>
+      &copy; 2019 TRX币<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3" class="mobile-nav-link">买币</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    <a href='#logo' id='btn-btt'>^</a>
+  </div>
+</body>
+</html>
