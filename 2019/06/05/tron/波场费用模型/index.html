@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>波场费用模型 | 波场TRX币</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="波场费用模型TRON网络中的资源有3种：带宽，CPU和存储。得益于波场独有的内存模型，TRON网络中的存储资源几乎是无限的。但是过多无关紧要的交易仍然会消耗过多的带宽和CPU资源时，导致导致系统阻塞，影响正常交易的处理确认。为了保持交易的相对公平，波场网络引入了Bandwidth point 和 Energy 两种资源。其中带宽消耗的是Bandwidth Point，而CPU消耗的是Energy。">
+<meta name="keywords" content="波场协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="波场费用模型">
+<meta property="og:url" content="http://www.trxbi.com/2019/06/05/tron/波场费用模型/index.html">
+<meta property="og:site_name" content="波场TRX币">
+<meta property="og:description" content="波场费用模型TRON网络中的资源有3种：带宽，CPU和存储。得益于波场独有的内存模型，TRON网络中的存储资源几乎是无限的。但是过多无关紧要的交易仍然会消耗过多的带宽和CPU资源时，导致导致系统阻塞，影响正常交易的处理确认。为了保持交易的相对公平，波场网络引入了Bandwidth point 和 Energy 两种资源。其中带宽消耗的是Bandwidth Point，而CPU消耗的是Energy。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T06:43:38.077Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="波场费用模型">
+<meta name="twitter:description" content="波场费用模型TRON网络中的资源有3种：带宽，CPU和存储。得益于波场独有的内存模型，TRON网络中的存储资源几乎是无限的。但是过多无关紧要的交易仍然会消耗过多的带宽和CPU资源时，导致导致系统阻塞，影响正常交易的处理确认。为了保持交易的相对公平，波场网络引入了Bandwidth point 和 Energy 两种资源。其中带宽消耗的是Bandwidth Point，而CPU消耗的是Energy。">
+<meta name="twitter:creator" content="@coolwuxing">
+  
+    <link rel="alternative" href="/atom.xml" title="波场TRX币" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43935113-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cb925fa900fb107efad8d43d1e78d73e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">波场TRX币
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3">买币</a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.trxbi.com"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="main-wrap" class="outer">
+        <section id="main"><article id="post-tron/波场费用模型" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/05/tron/波场费用模型/" class="article-date">
+  <time datetime="2019-06-05T10:38:57.000Z" itemprop="datePublished">2019-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      波场费用模型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="波场费用模型"><a href="#波场费用模型" class="headerlink" title="波场费用模型"></a>波场费用模型</h1><p>TRON网络中的资源有3种：带宽，CPU和存储。得益于波场独有的内存模型，TRON网络中的存储资源几乎是无限的。<br>但是过多无关紧要的交易仍然会消耗过多的带宽和CPU资源时，导致导致系统阻塞，影响正常交易的处理确认。<br>为了保持交易的相对公平，波场网络引入了Bandwidth point 和 Energy 两种资源。<br>其中带宽消耗的是Bandwidth Point，而CPU消耗的是Energy。<br><strong>注意</strong> </p>
+<ul>
+<li>普通交易仅消耗Bandwidth points</li>
+<li>智能合约的操作不仅要消耗Bandwidth points，还会消耗Energy</li>
+</ul>
+<p><a href="#1">1.Bandwidth Points</a>\<br><a href="#1.1">1.1 Bandwidth Points的来源</a>\<br><a href="#1.2">1.2 Bandwidth Points的消耗</a>\<br><a href="#1.3">1.3 Bandwidth Points的计算规则</a>\<br><a href="#2">2.Energy</a>\<br><a href="#2.1">2.1 Energy的获取</a>\<br><a href="#2.2">2.2 Energy的消耗</a>\<br><a href="#2.3">2.3 Energy的计算规则</a><br><a href="#3">3.资源上限自适应变更</a>\</p>
+<h2 id="1-Bandwidth-Points"><a href="#1-Bandwidth-Points" class="headerlink" title="1.Bandwidth Points"></a><h2 id="1">1.Bandwidth Points</h2></h2><p>交易以字节数组的形式在网络中传输及存储，一条交易消耗的Bandwidth Points = 交易字节数 * Bandwidth Points费率。当前Bandwidth Points费率 = 1。</p>
+<p>如一条交易的字节数组长度为200，那么该交易需要消耗200 Bandwidth Points。</p>
+<p><strong>注意</strong> 由于网络中总冻结资金以及账户的冻结资金随时可能发生变化，因此账户拥有的Bandwidth Points不是固定值。</p>
+<h3 id="1-1-Bandwidth-Points的来源"><a href="#1-1-Bandwidth-Points的来源" class="headerlink" title="1.1 Bandwidth Points的来源"></a><h2 id="1.1">1.1 Bandwidth Points的来源</h2></h3><p>Bandwidth Points的获取分两种：</p>
+<ul>
+<li><p>一种是通过冻结TRX获取的Bandwidth Points， 额度 = 为获取Bandwidth Points冻结的TRX / 整个网络为获取Bandwidth Points冻结的TRX 总额 * 43_200_000_000。<br>也就是所有用户按冻结TRX平分固定额度的Bandwidth Points。</p>
+</li>
+<li><p>还有一种是每个账号每天有固定免费额度的带宽，为5000。</p>
+</li>
+</ul>
+<h3 id="1-2-Bandwidth-Points的消耗"><a href="#1-2-Bandwidth-Points的消耗" class="headerlink" title="1.2 Bandwidth Points的消耗"></a><h2 id="1.2">1.2 Bandwidth Points的消耗</h2></h3><p>除了查询操作，任何交易都需要消耗bandwidth points。</p>
+<p>还有一种情况，如果是转账，包括普通转账或发行Token转账，如果目标账户不存在，转账操作则会创建账户并转账，只会扣除创建账户消耗的Bandwidth Points，转账不会再消耗额外的Bandwidth Points。</p>
+<h3 id="1-3-Bandwidth-Points的计算规则"><a href="#1-3-Bandwidth-Points的计算规则" class="headerlink" title="1.3 Bandwidth Points的计算规则"></a><h2 id="1.3">1.3 Bandwidth Points的计算规则</h2></h3><p>Bandwidth Points是一个账户1天内能够使用的总字节数。一定时间内，整个网络能够处理的Bandwidth为确定值。</p>
+<p>如果交易需要创建新账户，Bandwidth Points消耗如下：</p>
+<pre><code>1、尝试消耗交易发起者冻结获取的Bandwidth Points。如果交易发起者Bandwidth Points不足，则进入下一步。
+
+2、尝试消耗交易发起者的TRX，这部分烧掉0.1TRX。
+</code></pre><p>如果交易是发行Token转账，Bandwidth Points消耗如下：</p>
+<pre><code>1、依次验证 发行Token资产总的免费Bandwidth Points是否足够消耗，转账发起者的Token剩余免费Bandwidth Points是否足够消耗，
+Token发行者冻结TRX获取Bandwidth Points剩余量是否足够消耗。如果满足则扣除Token发行者的Bandwidth Points，任意一个不满足则进入下一步。
+
+2、尝试消耗交易发起者冻结获取的Bandwidth Points。如果交易发起者Bandwidth Points不足，则进入下一步。
+
+3、尝试消耗交易发起者的免费Bandwidth Points。如果免费Bandwidth Points也不足，则进入下一步。
+
+4、尝试消耗交易发起者的TRX，交易的字节数 * 10 sun。
+</code></pre><p>如果交易普通交易，Bandwidth Points消耗如下：</p>
+<pre><code>1、尝试消耗交易发起者冻结获取的Bandwidth Points。如果交易发起者Bandwidth Points不足，则进入下一步。
+
+2、尝试消耗交易发起者的免费Bandwidth Points。如果免费Bandwidth Points也不足，则进入下一步。
+
+3、尝试消耗交易发起者的TRX，交易的字节数 * 10 sun。
+</code></pre><h2 id="2-Energy"><a href="#2-Energy" class="headerlink" title="2.Energy"></a><h2 id="2">2.Energy</h2></h2><p>智能合约的创建和运行需要消耗CPU资源，用于确定智能合约在虚拟机执行过程中消耗的系统时间，单位为Energy。</p>
+<h3 id="2-1-Energy的获取"><a href="#2-1-Energy的获取" class="headerlink" title="2.1 Energy的获取"></a><h2 id="2.1">2.1 Energy的获取</h2></h3><p>Energy只能通过冻结TRX获取，获取的Energy额度 = 为获取Energy冻结的TRX / 整个网络为获取Energy冻结的TRX 总额 * 50_000_000_000。<br>也就是所有用户按冻结TRX平分固定额度的Energy。</p>
+<p>例如，假设当前网络中为了Energy而冻结的TRX总量为1000_000_000TRX，一个账户冻结了1000TRX，占总冻结量的百万分之一，即32400Energy。<br>一条合约执行如果需要花费324Energy，那么用户可以触发100次该合约。</p>
+<p><strong>注意</strong> </p>
+<ul>
+<li>由于网络中总冻结量以及账户的冻结量随时可能发生变化，因此账户拥有的CPU资源不是固定值。 </li>
+<li>冻结资金不可同时获得Bandwidth Points 与Energy，即如果指定冻结TRX获得bandwidth，Energy不会变化。</li>
+</ul>
+<h3 id="2-2-Energy的消耗"><a href="#2-2-Energy的消耗" class="headerlink" title="2.2 Energy的消耗"></a><h2 id="2.2">2.2 Energy的消耗</h2></h3><p>只有智能合约的创建和执行都需要消耗Energy，普通合约的执行不消耗Energy。</p>
+<p>消耗的Energy，根据智能合约中定义的百分比，由智能合约所有者和调用者共同提供；如果智能合约所有者Energy不足，剩余的都由调用者提供。</p>
+<h3 id="2-3-Energy的计算规则"><a href="#2-3-Energy的计算规则" class="headerlink" title="2.3 Energy的计算规则"></a><h2 id="2.3">2.3 Energy的计算规则</h2></h3><p>Energy的消耗规则如下：</p>
+<pre><code>1、根据智能合约中设定的百分比参数，扣除智能合约所有者通过冻结TRX获取的的Energy，不足的部分由调用者提供。
+
+2、尝试消耗交易发起者冻结获取的Energy。如果不足，有多少扣多少，然后进入下一步。
+
+3、尝试消耗交易发起者的TRX，消耗的TRX = 所需Energy * 10 sun(该值根据委员会决议的提案会浮动)。
+</code></pre><h2 id="3-资源上限自适应变更"><a href="#3-资源上限自适应变更" class="headerlink" title="3.资源上限自适应变更"></a><h2 id="3">3.资源上限自适应变更</h2></h2><p>注意:该功能尚未开启</p>
+<p>为降低网络的使用成本，在网络资源低利用率的情况下，自适应的增加用户的可用资源。目前仅支持通过冻结获得的 Energy。<br> Bandwidth不支持自适应变更。</p>
+<p>通过调整Energy上限的方式，调整每个账户拥有的资源量。网络中原有字段”当前Energy上限”，现在新增字段”目标Energy上限”。</p>
+<p>每1分钟统计一次网络中Energy使用量，当使用量大于1min内的”目标Energy上限”，增加”当前Energy上限”。增加比例为1/1000。<br>反之，当使用量小于1min内的”目标Energy上限”，减少”当前Energy上限”。减小比例为1/100。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.trxbi.com/2019/06/05/tron/波场费用模型/" data-id="cjxcvz607000kijfmiz0eon6h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/波场协议/">波场协议</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/05/tron/多重签名/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          多重签名
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/05/tron/波场通证/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">波场通证</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          
+            <aside id="sidebar">
+  
+    
+  
+    
+    <div class="widget-wrap">
+      <h3 class="widget-title">Related</h3>
+      <div class="widget recents">
+        <ul>
+  
+    <li>
+      <a href="/2019/06/05/tron/波场去中心化交易所/">波场去中心化交易所</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/交易操作类型说明/">交易操作类型说明</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/冻结与投票/">冻结与投票</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/交易明细/">交易明细</a>
+    </li>
+  
+    <li>
+      <a href="/2019/06/05/tron/创建账户/">创建账户</a>
+    </li>
+  
+        </ul>
+      </div>
+    </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/05/tron/波场手册/">波场手册</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/buffett/">致社区的一封公开信：沃伦 · 巴菲特慈善午宴</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/交易操作类型说明/">交易操作类型说明</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/One_Page/">波场介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/05/tron/交易简介/">交易简介</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/波场介绍/" style="font-size: 10px;">波场介绍</a> <a href="/tags/波场协议/" style="font-size: 20px;">波场协议</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>
+      &copy; 2019 TRX币<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=34sb3" class="mobile-nav-link">买币</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    <a href='#logo' id='btn-btt'>^</a>
+  </div>
+</body>
+</html>
